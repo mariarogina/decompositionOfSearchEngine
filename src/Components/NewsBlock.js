@@ -9,7 +9,19 @@ import NavBar from "./NavBar";
 //2) справа виджет рекламы (текст + картинка)
 
 export default function NewsBlock({ news, newsMenu, currencyAndOil }) {
-  console.log(newsMenu);
+  function getWeekDay(date) {
+    let days = [
+      "воскресенье",
+      "понедельник",
+      "вторник",
+      "среда",
+      "четверг",
+      "пятница",
+      "суббота",
+    ];
+
+    return days[date.getDay()];
+  }
   return (
     <div
       className="container"
@@ -26,18 +38,39 @@ export default function NewsBlock({ news, newsMenu, currencyAndOil }) {
           <div className="container" style={{ padding: "0" }}>
             <div className="row">
               <div
-                className="col-md-8"
-                style={{ textAlign: "left", marginTop: "25px" }}
+                className="col-md-6"
+                style={{
+                  textAlign: "left",
+                  marginTop: "25px",
+                  display: "inline-block",
+                }}
               >
-                <NavBar list={newsMenu} />
+                <NavBar list={newsMenu}></NavBar>
               </div>
-              <div className="col-md-4"></div>
+              <div className="col-md-6">
+                <div
+                  style={{
+                    fontSize: "0.9rem",
+                    color: "grey",
+                    textAlign: "left",
+                    marginTop: "25px",
+                    paddingRight:'20px'
+                  }}
+                >
+                  {new Date().toLocaleString("ru", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                  {getWeekDay(new Date())}
+                </div>
+              </div>
 
               <div className="col-md-8" style={{ textAlign: "left" }}>
                 <ul style={{ padding: "0" }}>
                   {news.map((item) => {
                     return (
-                      <li style={{ listStyle: "none", display: "block" }}>
+                      <li key={item.id} style={{ listStyle: "none", display: "block" }}>
                         <img
                           src={item.logo}
                           style={{ width: "40px", marginRight: "5px" }}

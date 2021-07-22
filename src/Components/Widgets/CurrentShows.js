@@ -11,7 +11,7 @@ export default function CurrentShows({ widgets, shows }) {
         <ul>
           {shows.map((item) => {
             return (
-              <li>
+              <li key={item.id}>
                 <div className="row" style={{ fontSize: "0.8rem" }}>
                   <div className="col-md-6" style={{ color: "black" }}>
                     {item.title}

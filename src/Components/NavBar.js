@@ -4,13 +4,14 @@ import PropTypes from "prop-types";
 export default function NavBar(props) {
   return (
     <div>
-      {props.list.map((item) => {
-        return (
-          <a href="#" style={{ margin: "10px" }}>
-            {item}
-          </a>
-        );
-      })}
+        {props.list.map((item,index) => {
+          return (
+            <a key={index} href="#" style={{ margin: "5px" }}>
+              {item}
+            </a>
+          );
+        })}
+   <p>{props.children}</p>
     </div>
   );
 }

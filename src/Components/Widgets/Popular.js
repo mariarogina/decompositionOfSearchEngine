@@ -11,7 +11,7 @@ export default function Popular({ widgets, popular }) {
         <ul>
           {popular.map((item) => {
             return (
-              <li>
+              <li key={item.id}>
                 <div className="row" style={{ fontSize: "0.8rem" }}>
                   <div className="col-md-4" style={{ color: "black" }}>
                     {item.title}
