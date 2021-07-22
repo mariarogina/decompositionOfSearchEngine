@@ -2,10 +2,9 @@ import React from "react";
 import NavBar from "./NavBar";
 import PropTypes from "prop-types";
 
-//Содержит панель навигации (со ссылками на разные разделы сайта), 
-//ниже: логотип, строку поиска (поле ввода) и кнопку "найти". 
+//Содержит панель навигации (со ссылками на разные разделы сайта),
+//ниже: логотип, строку поиска (поле ввода) и кнопку "найти".
 //Ниже:слоган "найдётся всё" + ссылка "Например..."
-
 
 export default function SearchBlock({ navLinks }) {
   return (
@@ -16,7 +15,7 @@ export default function SearchBlock({ navLinks }) {
           border: "solid grey 1px",
           borderBottom: "none",
           paddingBottom: "10px",
-          fontSize:'0.9rem'
+          fontSize: "0.9rem",
         }}
       >
         <div className="row">

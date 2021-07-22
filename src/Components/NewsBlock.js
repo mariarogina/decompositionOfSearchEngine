@@ -17,7 +17,7 @@ export default function NewsBlock({ news, newsMenu, currencyAndOil }) {
         border: "solid grey 1px",
         borderBottom: "none",
         paddingBottom: "10px",
-        fontSize:'0.9rem'
+        fontSize: "0.9rem",
       }}
     >
       <div className="row">

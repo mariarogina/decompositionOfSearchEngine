@@ -13,7 +13,7 @@ export default function Popular({ widgets, popular }) {
             return (
               <li>
                 <div className="row" style={{ fontSize: "0.8rem" }}>
-                  <div className="col-md-6" style={{ color: "black" }}>
+                  <div className="col-md-4" style={{ color: "black" }}>
                     {item.title}
                   </div>
                   <div className="col-md-6" style={{ color: "blue" }}>
@@ -28,3 +28,13 @@ export default function Popular({ widgets, popular }) {
     </div>
   );
 }
+
+Popular.propTypes = {
+  widgets: PropTypes.array,
+  popular: PropTypes.array,
+};
+
+Popular.defaultProps = {
+  widgets: [],
+  popular: [],
+};

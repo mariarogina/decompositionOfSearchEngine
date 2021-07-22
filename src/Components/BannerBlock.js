@@ -17,11 +17,13 @@ export default function BannerBlock() {
         <div className="row">
           <div className="col-md-3"></div>
           <div className="col-md-9">
-             <a href="https://en.wikipedia.org/wiki/Cats_(musical)"><img
-              style={{ width: "560px", height: "60%", padding: "10px 10px" }}
-              src="https://cfrycentrestage.files.wordpress.com/2019/12/cats-poster.png"
-              alt="мюзикл"
-            /></a>
+            <a href="https://en.wikipedia.org/wiki/Cats_(musical)">
+              <img
+                style={{ width: "560px", height: "60%", padding: "10px 10px" }}
+                src="https://cfrycentrestage.files.wordpress.com/2019/12/cats-poster.png"
+                alt="мюзикл"
+              />
+            </a>
           </div>
         </div>
       </div>

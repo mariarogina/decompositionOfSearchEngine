@@ -28,3 +28,13 @@ export default function CurrentShows({ widgets, shows }) {
     </div>
   );
 }
+
+CurrentShows.propTypes = {
+  widgets: PropTypes.array,
+  shows: PropTypes.array,
+};
+
+CurrentShows.defaultProps = {
+  widgets: [],
+  shows: [],
+};

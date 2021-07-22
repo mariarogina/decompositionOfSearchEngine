@@ -4,8 +4,10 @@ import PropTypes from "prop-types";
 
 export default function TeleProgram({ widgets, programs }) {
   return (
-    <div>
-      <WidgetSample title={widgets[4]} />
+    <div className="container">
+      <div className="row" style={{ textAlign: "center" }}>
+        <WidgetSample title={widgets[4]} />
+      </div>
       <div className="row">
         <ul>
           {programs.map((item) => {
@@ -30,3 +32,13 @@ export default function TeleProgram({ widgets, programs }) {
     </div>
   );
 }
+
+TeleProgram.propTypes = {
+  widgets: PropTypes.array,
+  programs: PropTypes.array,
+};
+
+TeleProgram.defaultProps = {
+  widgets: [],
+  programs: [],
+};

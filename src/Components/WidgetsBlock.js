@@ -4,6 +4,8 @@ import Popular from "./Widgets/Popular";
 import CountryMap from "./Widgets/CountryMap";
 import TeleProgram from "./Widgets/TeleProgram";
 import CurrentShows from "./Widgets/CurrentShows";
+import PropTypes from "prop-types";
+
 //Содержит различные виджеты: прогноз погоды, ссылки на посещаемые сайты, карту страны, телепрограмму, список передач в эфире сейчас
 
 export default function WidgetsBlock({ widgets, shows, popular, programs }) {
@@ -26,10 +28,11 @@ export default function WidgetsBlock({ widgets, shows, popular, programs }) {
             </div>
 
             <div className="row" style={{ padding: "10px" }}>
-              <div className="col-sm" style={{ margin: "5px" }}>
+              <div className="col-sm-4" style={{ margin: "20px" }}>
                 <Popular widgets={widgets} popular={popular} />
               </div>
-              <div className="col-sm" style={{ margin: "5px" }}>
+
+              <div className="col-sm-6" style={{ margin: "20px" }}>
                 <TeleProgram widgets={widgets} programs={programs} />
               </div>
             </div>
@@ -39,3 +42,17 @@ export default function WidgetsBlock({ widgets, shows, popular, programs }) {
     </div>
   );
 }
+
+WidgetsBlock.propTypes = {
+  widgets: PropTypes.array,
+  shows: PropTypes.array,
+  popular: PropTypes.array,
+  programs: PropTypes.array,
+};
+
+WidgetsBlock.defaultProps = {
+  widgets: [],
+  shows: [],
+  popular: [],
+  programs: [],
+};
