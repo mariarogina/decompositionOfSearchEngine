@@ -16,7 +16,7 @@ export default function Popular({ widgets, popular }) {
                   <div className="col-md-4" style={{ color: "black" }}>
                     {item.title}
                   </div>
-                  <div className="col-md-6" style={{ color: "blue" }}>
+                  <div className="col-md-6" style={{ color: "grey" }}>
                     {item.about}
                   </div>
                 </div>

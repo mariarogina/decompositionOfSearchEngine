@@ -16,7 +16,7 @@ export default function CurrentShows({ widgets, shows }) {
                   <div className="col-md-6" style={{ color: "black" }}>
                     {item.title}
                   </div>
-                  <div className="col-md-6" style={{ color: "blue" }}>
+                  <div className="col-md-6" style={{ color: "grey" }}>
                     {item.channel}
                   </div>
                 </div>

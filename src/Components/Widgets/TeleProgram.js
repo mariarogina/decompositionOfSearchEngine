@@ -17,10 +17,10 @@ export default function TeleProgram({ widgets, programs }) {
                   <div className="col-md-2" style={{ color: "black" }}>
                     {item.time}
                   </div>
-                  <div className="col-md-4" style={{ color: "blue" }}>
+                  <div className="col-md-4" style={{ color: "black" }}>
                     {item.title}
                   </div>
-                  <div className="col-md-4" style={{ color: "blue" }}>
+                  <div className="col-md-4" style={{ color: "grey" }}>
                     {item.channel}
                   </div>
                 </div>
